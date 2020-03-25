@@ -1,0 +1,11 @@
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\bin\Debug\netcoreapp3.1\Model.exe
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\bin\Debug\netcoreapp3.1\Model.deps.json
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\bin\Debug\netcoreapp3.1\Model.runtimeconfig.json
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\bin\Debug\netcoreapp3.1\Model.runtimeconfig.dev.json
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\obj\Debug\netcoreapp3.1\Model.csprojAssemblyReference.cache
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfoInputs.cache
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfo.cs
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\obj\Debug\netcoreapp3.1\Model.dll
+C:\Users\bittu\source\repos\Employee_Crud_API\Model\obj\Debug\netcoreapp3.1\Model.pdb
