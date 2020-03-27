@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Repository.IRepository
 {
@@ -9,8 +10,8 @@ namespace Repository.IRepository
     {
         EmployeeModel GetEmployee(int id);
         IEnumerable<EmployeeModel> GetAllEmployees();
-        EmployeeModel AddEmployee(EmployeeModel employee);
-        EmployeeModel UpdateEmployee(EmployeeModel employeeChanges);
+        Task<int> AddEmployee(EmployeeModel employee);
+        Task<int> UpdateEmployee(EmployeeModel employeeChanges);
         EmployeeModel DeleteEmployee(int id);
     }
 }
