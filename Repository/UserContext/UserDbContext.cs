@@ -12,7 +12,7 @@ namespace Repository.UserContext
         {
 
         }
-        public DbSet<Employee> Employees
+        public DbSet<EmployeeModel> Employees
         {
             get;
             set;

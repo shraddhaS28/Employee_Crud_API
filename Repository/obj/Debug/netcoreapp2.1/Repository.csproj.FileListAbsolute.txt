@@ -11,3 +11,16 @@ C:\Users\bittu\source\repos\Repository\obj\Debug\netcoreapp2.1\Repository.pdb
 C:\Users\bittu\source\repos\Repository\bin\Debug\netcoreapp2.1\Model.dll
 C:\Users\bittu\source\repos\Repository\bin\Debug\netcoreapp2.1\Model.pdb
 C:\Users\bittu\source\repos\Repository\obj\Debug\netcoreapp2.1\Repository.csproj.CopyComplete
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\bin\Debug\netcoreapp2.1\Repository.deps.json
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\bin\Debug\netcoreapp2.1\Repository.runtimeconfig.json
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\bin\Debug\netcoreapp2.1\Repository.runtimeconfig.dev.json
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\bin\Debug\netcoreapp2.1\Repository.dll
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\bin\Debug\netcoreapp2.1\Repository.pdb
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\bin\Debug\netcoreapp2.1\Model.dll
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\bin\Debug\netcoreapp2.1\Model.pdb
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.csprojAssemblyReference.cache
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.AssemblyInfoInputs.cache
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.AssemblyInfo.cs
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.csproj.CopyComplete
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.dll
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.pdb

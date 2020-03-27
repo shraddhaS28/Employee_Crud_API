@@ -3533,11 +3533,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\bittu\\source\\repos\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\bittu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bittu\\source\\repos\\Repository\\obj\\",
+      "outputPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bittu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3553,8 +3553,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\bittu\\source\\repos\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\bittu\\source\\repos\\Model\\Model.csproj"
+            "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj"
             }
           }
         }
