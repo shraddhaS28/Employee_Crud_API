@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bittu\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {}
+    "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bittu\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {
+    "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
         "projectName": "EmployeeManagementSystem",
-        "projectPath": "C:\\Users\\bittu\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+        "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
         "packagesPath": "C:\\Users\\bittu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bittu\\source\\repos\\EmployeeManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\EmployeeManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bittu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,11 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\bittu\\source\\repos\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\bittu\\source\\repos\\Repository\\Repository.csproj"
+              "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Manager\\Manager.csproj": {
+                "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Manager\\Manager.csproj"
+              },
+              "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj"
               }
             }
           }
@@ -59,6 +62,12 @@
               "version": "[2.1.0, )",
               "autoReferenced": true
             },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[4.0.1, )"
@@ -86,14 +95,76 @@
         }
       }
     },
-    "C:\\Users\\bittu\\source\\repos\\Model\\Model.csproj": {
+    "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Manager\\Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Model\\Model.csproj",
-        "projectName": "Model",
-        "projectPath": "C:\\Users\\bittu\\source\\repos\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Manager\\Manager.csproj",
+        "projectName": "Manager",
+        "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Manager\\Manager.csproj",
         "packagesPath": "C:\\Users\\bittu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bittu\\source\\repos\\Model\\obj\\",
+        "outputPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Manager\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bittu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj"
+              },
+              "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\bittu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bittu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -141,14 +212,14 @@
         }
       }
     },
-    "C:\\Users\\bittu\\source\\repos\\Repository\\Repository.csproj": {
+    "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\bittu\\source\\repos\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\bittu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bittu\\source\\repos\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bittu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,8 +235,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\bittu\\source\\repos\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\bittu\\source\\repos\\Model\\Model.csproj"
+              "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\bittu\\source\\repos\\Employee_Crud_API\\Model\\Model.csproj"
               }
             }
           }

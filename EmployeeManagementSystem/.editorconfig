@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# SA1614: Element parameter documentation should have text
+dotnet_diagnostic.SA1614.severity = none
