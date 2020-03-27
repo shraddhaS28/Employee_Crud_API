@@ -10,7 +10,7 @@
     /// <summary>
     /// Manager Implementation class
     /// </summary>
-    class MngrImplementation : IManager
+    public class MngrImplementation : IManager
     {
         private readonly IRepo repo;
 
