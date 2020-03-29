@@ -45,3 +45,5 @@ C:\Users\bittu\source\repos\Employee_Crud_API\EmployeeManagementSystem\bin\Debug
 C:\Users\bittu\source\repos\Employee_Crud_API\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\stylecop2.json
 C:\Users\bittu\source\repos\Employee_Crud_API\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\Manager.dll
 C:\Users\bittu\source\repos\Employee_Crud_API\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\Manager.pdb
+C:\Users\bittu\source\repos\Employee_Crud_API\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.genruntimeconfig.cache
+C:\Users\bittu\source\repos\Employee_Crud_API\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\stylecop3.json

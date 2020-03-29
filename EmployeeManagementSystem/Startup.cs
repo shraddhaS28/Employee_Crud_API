@@ -46,7 +46,7 @@
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContextPool<UserDbContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("UserDbConnection")));
-            services.AddTransient<IManager, MngrImplementation>();
+            services.AddTransient<IManager, ManagerImplementation>();
             services.AddTransient<IRepo, RepoImplement>();
             services.AddSwaggerGen(c =>
             {

@@ -7,9 +7,10 @@
     using Manager;
     using Microsoft.AspNetCore.Mvc;
     using Model;
+    using Serilog;
 
     /// <summary>
-    /// Controller class.
+    /// Controlleer class route the project to access database.
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
@@ -18,7 +19,7 @@
         /// <summary>
         /// variable of imanager interface type.
         /// </summary>
-        public readonly IManager Manager;
+        private readonly IManager manager;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ValuesController"/> class.
@@ -27,19 +28,19 @@
         /// <param name="manager"></param>
         public ValuesController(IManager manager)
         {
-            this.Manager = manager;
+            this.manager = manager;
         }
 
         /// <summary>
-        /// method to add employee data.
+        /// Method to add employee data.
         /// </summary>
         /// <param name="employee"></param>
-        /// <returns>  Updated Employee Data </returns>
+        /// <returns>  Updated Employee Data. </returns>
         [Route("AddEmployee")]
         [HttpPost]
         public async Task<IActionResult> AddEmployee(Model.EmployeeModel employee)
         {
-            var result = await this.Manager.AddEmployee(employee);
+            var result = await this.manager.AddEmployee(employee);
             if (result == 1)
             {
                 return this.Ok(employee);
@@ -47,22 +48,24 @@
             else
             {
                 return this.BadRequest();
+                Log.Error("BadRequest, Provide Correct Infomation of Employee");
             }
         }
 
         /// <summary>
-        /// method to get all employees data.
+        /// Method to get all employees data.
         /// </summary>
         /// <returns> Updated Employee Data </returns>
         [Route("GetAllEmployee")]
         [HttpGet]
         public IEnumerable<EmployeeModel> GetAllEmployees()
         {
-            return this.Manager.GetAllEmployees();
+            return this.manager.GetAllEmployees();
+            Log.Information("Method will show all the employee data saved in the DataBase");
         }
 
         /// <summary>
-        /// method to update employee data.
+        /// Method to update employee data.
         /// </summary>
         /// <param name="employeeChanges"></param>
         /// <returns> Updated Employee Data </returns>
@@ -70,7 +73,7 @@
         [HttpPut]
         public async Task<IActionResult> UpdateEmployee(EmployeeModel employeeChanges)
         {
-            var result = await this.Manager.UpdateEmployee(employeeChanges);
+            var result = await this.manager.UpdateEmployee(employeeChanges);
             if (result == 1)
             {
                 return this.Ok(employeeChanges);
@@ -78,11 +81,12 @@
             else
             {
                 return this.BadRequest();
+                Log.Error("Bad Request, Provide Correct employee Data to be updated");
             }
         }
 
         /// <summary>
-        /// method to delete from employee data.
+        /// Method to delete from employee data.
         /// </summary>
         /// <param name="id"></param>
         /// <returns> Updated Employee Data </returns>
@@ -90,11 +94,12 @@
         [Route("DeleteEmployee")]
         public EmployeeModel DeleteEmployee(int id)
         {
-            return this.Manager.DeleteEmployee(id);
+            return this.manager.DeleteEmployee(id);
+            Log.Information("Method will Delete data of one employee using employee id");
         }
 
         /// <summary>
-        /// method to get employee data.
+        /// Method to get employee data.
         /// </summary>
         /// <param name="id"></param>
         /// <returns> Updated Employee Data </returns>
@@ -102,7 +107,8 @@
         [HttpGet]
         public EmployeeModel GetEmployee(int id)
         {
-            return this.Manager.GetEmployee(id);
+            return this.manager.GetEmployee(id);
+            Log.Information("Method will show data of one employee using employee id");
         }
     }
 }
