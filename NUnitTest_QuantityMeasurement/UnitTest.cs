@@ -1,7 +1,11 @@
-using NUnit.Framework;
-
 namespace NUnitTest_QuantityMeasurement
 {
+    using NUnit.Framework;
+    using QuantityMeasurement;
+
+    /// <summary>
+    /// Test Case Class
+    /// </summary>
     public class Tests
     {
         [SetUp]
@@ -9,10 +13,16 @@ namespace NUnitTest_QuantityMeasurement
         {
         }
 
+        /// <summary>
+        /// TestCase 1.1
+        /// </summary>
         [Test]
-        public void Test1()
+        public void Given_0_and_0_Feet_WhenAnalyse_Should_Return_Equal()
         {
-            Assert.Pass();
+            int feetValue = 0;
+            Feet feet = new Feet(feetValue);
+            bool actual = feet.Equals(feetValue);
+            Assert.IsTrue(actual);
         }
     }
 }
