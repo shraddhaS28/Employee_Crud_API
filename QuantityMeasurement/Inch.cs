@@ -14,7 +14,7 @@ namespace QuantityMeasurement
     /// <summary>
     /// Inch Class
     /// </summary>
-    class Inch
+    public class Inch
     {
         /// <summary>
         /// private value of inch
@@ -41,7 +41,7 @@ namespace QuantityMeasurement
         /// Method to get inch value
         /// </summary>
         /// <returns></returns>
-        public int EqualisVaueEqualValue()
+        public int isValueEqual()
         {
             return this.inchValue;
         }
@@ -53,7 +53,7 @@ namespace QuantityMeasurement
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if (obj == null)
+            if ((obj == null) || object.ReferenceEquals(this, obj))
                 return true;
 
             return false;
