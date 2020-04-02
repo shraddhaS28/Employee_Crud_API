@@ -1,3 +1,10 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Tests.cs" company="Bridgelabz">
+// Copyright © 2020 Company="BridgeLabz".
+// </copyright>
+// <creator name="Shraddha Singh"/>
+// --------------------------------------------------------------------------------------------------------------------
+
 namespace NUnitTest_QuantityMeasurement
 {
     using NUnit.Framework;
@@ -67,6 +74,18 @@ namespace NUnitTest_QuantityMeasurement
             Feet feet = new Feet(16);
             int result = feet.isValueEqual();
             Assert.AreEqual(16, result);
+        }
+
+        /// <summary>
+        /// TestCase 1.8
+        /// </summary>
+        [Test]
+        public void Given_0_and_0_Inch_WhenAnalyse_Should_Return_Equal()
+        {
+            int expected = 0;
+            Inch inch = new Inch(0);
+            int actual = inch.isValueEqual();
+            Assert.AreEqual(expected, actual);
         }
     }
 }
