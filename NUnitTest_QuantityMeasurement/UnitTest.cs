@@ -66,7 +66,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 1.5
+        /// TestCase 1.5/1.6(Refactor)
         /// </summary>
         [Test]
         public void Perform_Test_For_Equality_Value_Check()
@@ -77,7 +77,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 1.8
+        /// TestCase 1.7
         /// </summary>
         [Test]
         public void Given_0_and_0_Inch_WhenAnalyse_Should_Return_Equal()
@@ -86,6 +86,17 @@ namespace NUnitTest_QuantityMeasurement
             Inch inch = new Inch(0);
             int actual = inch.isValueEqual();
             Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// TestCase 1.8
+        /// </summary>
+        [Test]
+        public void Test_For_Equality_Null_Check_For_Inch()
+        {
+            Inch inch = new Inch();
+            bool result = inch.Equals(null);
+            Assert.IsTrue(result);
         }
     }
 }
