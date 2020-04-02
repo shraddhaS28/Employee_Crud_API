@@ -14,11 +14,6 @@
         /// </summary>
         private int feetValue;
 
-        /// <summary>
-        /// object type to check for null feet value.
-        /// </summary>
-        private object o;
-
         public Feet()
         {
 
@@ -34,44 +29,22 @@
         }
 
         /// <summary>
-        /// Parameterized Constructor(object Type)
-        /// </summary>
-        /// <param name="o"></param>
-        public Feet(object o)
-        {
-            this.o = o;
-        }
-
-        /// <summary>
         /// Overridden equals method
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if (obj == null)
-                return false;
-            else
+            if ((obj == null) || object.ReferenceEquals(this, obj) || this.GetType().Equals(obj.GetType()))
                 return true;
+            else
+                return false;
 
         }
 
-        public int isEqual()
+        public int isValueEqual()
         {
             return this.feetValue;
-        }
-
-        /// <summary>
-        /// check feet value is equal or not
-        /// </summary>
-        /// <param name="feetValue"></param>
-        /// <returns></returns>
-        public bool checkFeetValue(Feet feetValue)
-        {
-            if (this.feetValue.Equals(feetValue.feetValue))
-                return true;
-            else
-                return false;
         }
     }
 }
