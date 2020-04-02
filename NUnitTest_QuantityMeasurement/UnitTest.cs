@@ -122,7 +122,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 1.11
+        /// TestCase 1.11/1.12(Refactor)
         /// </summary>
         [Test]
         public void Test_For_Equality_Value_Check_For_Inch()
@@ -130,6 +130,16 @@ namespace NUnitTest_QuantityMeasurement
             UnitCheck inch = new UnitCheck(19);
             int result = inch.isValueEqual();
             Assert.AreEqual(19, result);
+        }
+
+        [Test]
+        public void Give_0_Feet_and_0_Inch_When_Analyze_Should_Return_Equal()
+        {
+            Feet feet = new Feet(0);
+            int expected = feet.isValueEqual();
+            Inch inch = new Inch(0);
+            int actual = inch.isValueEqual();
+            Assert.AreEqual(expected, actual);
         }
     }
 }
