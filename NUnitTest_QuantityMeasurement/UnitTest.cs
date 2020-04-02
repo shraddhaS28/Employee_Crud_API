@@ -58,7 +58,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.4
         /// </summary>
         [Test]
-        public void Perform_Test_For_Equality_Type_Check()
+        public void Test_For_Equality_Type_Check_For_Feet()
         {
             Feet feet = new Feet();
             bool result = feet.Equals(new Feet());
@@ -69,7 +69,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.5/1.6(Refactor)
         /// </summary>
         [Test]
-        public void Perform_Test_For_Equality_Value_Check()
+        public void Test_For_Equality_Value_Check_For_Feet()
         {
             Feet feet = new Feet(16);
             int result = feet.isValueEqual();
@@ -101,12 +101,23 @@ namespace NUnitTest_QuantityMeasurement
 
         /// <summary>
         /// TestCase 1.9
-        /// </summary> 
+        /// </summary>
         [Test]
         public void Test_For_Equality_Reference_Check_For_Inch()
         {
             Inch inch = new Inch();
             bool result = inch.Equals(inch);
+            Assert.IsTrue(result);
+        }
+
+        /// <summary>
+        /// TestCase 1.10
+        /// </summary>
+        [Test]
+        public void Test_For_Equality_Type_Check_For_Inch()
+        {
+            Inch inch = new Inch();
+            bool result = inch.Equals(new Inch());
             Assert.IsTrue(result);
         }
     }
