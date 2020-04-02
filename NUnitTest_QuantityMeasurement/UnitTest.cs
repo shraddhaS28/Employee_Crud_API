@@ -101,7 +101,7 @@ namespace NUnitTest_QuantityMeasurement
 
         /// <summary>
         /// TestCase 1.9
-        /// </summary>
+        /// </summary> 
         [Test]
         public void Test_For_Equality_Reference_Check_For_Inch()
         {
