@@ -19,8 +19,13 @@
         /// </summary>
         private object o;
 
+        public Feet()
+        {
+
+        }
+
         /// <summary>
-        /// Parameterized Constructor
+        /// Parameterized Constructor(Int Type)
         /// </summary>
         /// <param name="feetValue"></param>
         public Feet(int feetValue)
@@ -28,6 +33,10 @@
             this.feetValue = feetValue;
         }
 
+        /// <summary>
+        /// Parameterized Constructor(object Type)
+        /// </summary>
+        /// <param name="o"></param>
         public Feet(object o)
         {
             this.o = o;
