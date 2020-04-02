@@ -21,8 +21,8 @@ namespace NUnitTest_QuantityMeasurement
         {
             int feetValue = 0;
             Feet feet = new Feet(feetValue);
-            bool actual = feet.Equals(feetValue);
-            Assert.IsTrue(actual);
+            bool result = feet.checkFeetValue(new Feet(0));
+            Assert.IsTrue(result);
         }
     }
 }
