@@ -32,7 +32,7 @@ namespace NUnitTest_QuantityMeasurement
         public void Test_For_Equality_Null_Check_For_Feet()
         {
             Feet feet = new Feet(null);
-            bool result = feet.Equals(new Feet(0));
+            bool result = feet.Equals(null);
             Assert.IsTrue(result);
         }
 
@@ -56,6 +56,17 @@ namespace NUnitTest_QuantityMeasurement
             Feet feet = new Feet();
             bool result = feet.Equals(new Feet());
             Assert.IsTrue(result);
+        }
+
+        /// <summary>
+        /// TestCase 1.5
+        /// </summary>
+        [Test]
+        public void Perform_Test_For_Equality_Value_Check()
+        {
+            Feet feet = new Feet(16);
+            int result = feet.isEqual();
+            Assert.AreEqual(16, result);
         }
     }
 }
