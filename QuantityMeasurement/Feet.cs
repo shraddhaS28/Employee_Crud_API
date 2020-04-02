@@ -15,12 +15,22 @@
         private int feetValue;
 
         /// <summary>
+        /// object type to check for null feet value.
+        /// </summary>
+        private object o;
+
+        /// <summary>
         /// Parameterized Constructor
         /// </summary>
         /// <param name="feetValue"></param>
         public Feet(int feetValue)
         {
             this.feetValue = feetValue;
+        }
+
+        public Feet(object o)
+        {
+            this.o = o;
         }
 
         /// <summary>
@@ -30,10 +40,10 @@
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if (feetValue.Equals(obj))
-                return true;
-            else
+            if (obj == null)
                 return false;
+            else
+                return true;
 
         }
 
