@@ -36,11 +36,25 @@ namespace NUnitTest_QuantityMeasurement
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// TestCase 1.3
+        /// </summary>
         [Test]
         public void Test_For_Equality_Reference_Check_For_Feet()
         {
             Feet feet = new Feet();
             bool result = feet.Equals(feet);
+            Assert.IsTrue(result);
+        }
+
+        /// <summary>
+        /// TestCase 1.4
+        /// </summary>
+        [Test]
+        public void Perform_Test_For_Equality_Type_Check()
+        {
+            Feet feet = new Feet();
+            bool result = feet.Equals(new Feet());
             Assert.IsTrue(result);
         }
     }
