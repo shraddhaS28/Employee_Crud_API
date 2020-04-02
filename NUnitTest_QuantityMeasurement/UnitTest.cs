@@ -120,5 +120,16 @@ namespace NUnitTest_QuantityMeasurement
             bool result = inch.Equals(new Inch());
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// TestCase 1.11
+        /// </summary>
+        [Test]
+        public void Test_For_Equality_Value_Check_For_Inch()
+        {
+            Inch inch = new Inch(19);
+            int result = inch.isValueEqual();
+            Assert.AreEqual(19, result);
+        }
     }
 }
