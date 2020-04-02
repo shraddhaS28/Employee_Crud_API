@@ -56,6 +56,16 @@
 
         }
 
+        public int isEqual()
+        {
+            return this.feetValue;
+        }
+
+        /// <summary>
+        /// check feet value is equal or not
+        /// </summary>
+        /// <param name="feetValue"></param>
+        /// <returns></returns>
         public bool checkFeetValue(Feet feetValue)
         {
             if (this.feetValue.Equals(feetValue.feetValue))
