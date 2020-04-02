@@ -19,10 +19,10 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Given_0_and_0_Feet_WhenAnalyse_Should_Return_Equal()
         {
-            int feetValue = 0;
-            Feet feet = new Feet(feetValue);
-            bool result = feet.checkFeetValue(new Feet(0));
-            Assert.IsTrue(result);
+            int expected = 0;
+            Feet feet = new Feet(0);
+            int actual = feet.isValueEqual();
+            Assert.AreEqual(expected, actual);
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Null_Check_For_Feet()
         {
-            Feet feet = new Feet(null);
+            Feet feet = new Feet();
             bool result = feet.Equals(null);
             Assert.IsTrue(result);
         }
@@ -65,7 +65,7 @@ namespace NUnitTest_QuantityMeasurement
         public void Perform_Test_For_Equality_Value_Check()
         {
             Feet feet = new Feet(16);
-            int result = feet.isEqual();
+            int result = feet.isValueEqual();
             Assert.AreEqual(16, result);
         }
     }
