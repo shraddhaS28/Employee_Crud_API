@@ -27,7 +27,7 @@ namespace NUnitTest_QuantityMeasurement
         public void Given_0_and_0_Feet_WhenAnalyse_Should_Return_Equal()
         {
             int expected = 0;
-            Feet feet = new Feet(0);
+            UnitCheck feet = new UnitCheck(0);
             int actual = feet.isValueEqual();
             Assert.AreEqual(expected, actual);
         }
@@ -38,7 +38,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Null_Check_For_Feet()
         {
-            Feet feet = new Feet();
+            UnitCheck feet = new UnitCheck();
             bool result = feet.Equals(null);
             Assert.IsTrue(result);
         }
@@ -49,7 +49,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Reference_Check_For_Feet()
         {
-            Feet feet = new Feet();
+            UnitCheck feet = new UnitCheck();
             bool result = feet.Equals(feet);
             Assert.IsTrue(result);
         }
@@ -60,8 +60,8 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Type_Check_For_Feet()
         {
-            Feet feet = new Feet();
-            bool result = feet.Equals(new Feet());
+            UnitCheck feet = new UnitCheck();
+            bool result = feet.Equals(new UnitCheck());
             Assert.IsTrue(result);
         }
 
@@ -71,7 +71,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Value_Check_For_Feet()
         {
-            Feet feet = new Feet(16);
+            UnitCheck feet = new UnitCheck(16);
             int result = feet.isValueEqual();
             Assert.AreEqual(16, result);
         }
@@ -83,7 +83,7 @@ namespace NUnitTest_QuantityMeasurement
         public void Given_0_and_0_Inch_WhenAnalyse_Should_Return_Equal()
         {
             int expected = 0;
-            Inch inch = new Inch(0);
+            UnitCheck inch = new UnitCheck(0);
             int actual = inch.isValueEqual();
             Assert.AreEqual(expected, actual);
         }
@@ -94,7 +94,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Null_Check_For_Inch()
         {
-            Inch inch = new Inch();
+            UnitCheck inch = new UnitCheck();
             bool result = inch.Equals(null);
             Assert.IsTrue(result);
         }
@@ -105,7 +105,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Reference_Check_For_Inch()
         {
-            Inch inch = new Inch();
+            UnitCheck inch = new UnitCheck();
             bool result = inch.Equals(inch);
             Assert.IsTrue(result);
         }
@@ -116,8 +116,8 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Type_Check_For_Inch()
         {
-            Inch inch = new Inch();
-            bool result = inch.Equals(new Inch());
+            UnitCheck inch = new UnitCheck();
+            bool result = inch.Equals(new UnitCheck());
             Assert.IsTrue(result);
         }
 
@@ -127,7 +127,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void Test_For_Equality_Value_Check_For_Inch()
         {
-            Inch inch = new Inch(19);
+            UnitCheck inch = new UnitCheck(19);
             int result = inch.isValueEqual();
             Assert.AreEqual(19, result);
         }
