@@ -53,7 +53,7 @@ namespace QuantityMeasurement
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if ((obj == null) || object.ReferenceEquals(this, obj))
+            if ( (obj == null) || object.ReferenceEquals(this, obj) )
                 return true;
 
             return false;
