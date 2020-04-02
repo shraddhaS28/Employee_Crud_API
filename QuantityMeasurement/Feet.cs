@@ -36,5 +36,13 @@
                 return false;
 
         }
+
+        public bool checkFeetValue(Feet feetValue)
+        {
+            if (this.feetValue.Equals(feetValue.feetValue))
+                return true;
+            else
+                return false;
+        }
     }
 }
