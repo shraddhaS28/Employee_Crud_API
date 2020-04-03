@@ -252,5 +252,17 @@ namespace NUnitTest_QuantityMeasurement
             int actual = check.ConvertFromInchToYard(36);
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 1.23
+        /// </summary>
+        [Test]
+        public void Compare_1yard_Equal_to_3feet_When_analyze_return_True()
+        {
+            int expected = 3;
+            UnitCheck check = new UnitCheck();
+            int actual = check.ConvertFromYardToFeet(1);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
