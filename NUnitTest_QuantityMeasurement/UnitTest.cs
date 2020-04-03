@@ -270,5 +270,17 @@ namespace NUnitTest_QuantityMeasurement
             double actual = conversion.ConvertFromGramToKilogram(1000);
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 23
+        /// </summary>
+        [Test]
+        public void Given1GramIsNotEqualTo2Gram_WhenAnalyse_ShouldReturnNotEqual()
+        {
+            Gram gm = new Gram();
+            double expected = 1;
+            double actual = gm.getValue(2);
+            Assert.AreNotEqual(expected, actual);
+        }
     }
 }
