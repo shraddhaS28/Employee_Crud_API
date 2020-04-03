@@ -77,5 +77,10 @@ namespace QuantityMeasurement
             return inch / 12;
         }
 
+        public int ConvertFromFeetToYard(int feet)
+        {
+            return feet / 3;
+        }
+
     }
 }
