@@ -339,5 +339,16 @@ namespace NUnitTest_QuantityMeasurement
             double result = cel.getValue(19);
             Assert.AreEqual(19, result);
         }
+
+        /// <summary>
+        /// TestCase 29
+        /// </summary>
+        [Test]
+        public void GivenTestForEqualityFTValueNullCheck_WhenAnalyse_ShouldReturnTrue()
+        {
+            Fahrenheit ft = new Fahrenheit();
+            bool result = ft.Equals(null);
+            Assert.IsTrue(result);
+        }
     }
 }
