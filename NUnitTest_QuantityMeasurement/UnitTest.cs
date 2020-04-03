@@ -228,5 +228,17 @@ namespace NUnitTest_QuantityMeasurement
             int actual = check.ConvertFromInchToYard(expected);
             Assert.AreNotEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 1.21
+        /// </summary>
+        [Test]
+        public void Compare_1yard_Equal_to_36Inch_When_analyze_return_True()
+        {
+            int expected = 1;
+            UnitCheck check = new UnitCheck();
+            int actual = check.ConvertFromInchToYard(36);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
