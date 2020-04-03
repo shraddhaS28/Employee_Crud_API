@@ -295,5 +295,16 @@ namespace NUnitTest_QuantityMeasurement
             double actual = conversion.ConvertFromGramToKilogram(2000);
             Assert.AreNotEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 25
+        /// </summary>
+        [Test]
+        public void GivenTestForEqualityCelValueNullCheck_WhenAnalyse_ShouldReturnTrue()
+        {
+            Celsius cel = new Celsius();
+            bool result = cel.Equals(null);
+            Assert.IsTrue(result);
+        }
     }
 }
