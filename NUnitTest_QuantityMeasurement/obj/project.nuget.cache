@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "z7YWqOtsfQn0430d/qArA1ZJOUWFOZD4onGUIzezahH0wE0NFvJqqvIf376/uPqs4Wzn71FGgWkvgqIdM6uytw==",
+  "dgSpecHash": "Dy2yFxcDW9elA1+po4Ar1tKoBvNP3wDVvqN77nlUvGHRd64RbQojHfTF2Wv2gN6//a8M2lRyre5YfpaE7vy5zw==",
   "success": true,
   "projectFilePath": "C:\\Users\\bittu\\Desktop\\Employee_Crud_API\\NUnitTest_QuantityMeasurement\\NUnitTest_QuantityMeasurement.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,8 @@
     "C:\\Users\\bittu\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\bittu\\.nuget\\packages\\nunit3testadapter\\3.15.1\\nunit3testadapter.3.15.1.nupkg.sha512",
     "C:\\Users\\bittu\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
+    "C:\\Users\\bittu\\.nuget\\packages\\stylecop\\6.1.0\\stylecop.6.1.0.nupkg.sha512",
+    "C:\\Users\\bittu\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
     "C:\\Users\\bittu\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\bittu\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\bittu\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
@@ -68,5 +70,16 @@
     "C:\\Users\\bittu\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\bittu\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'StyleCop 6.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "StyleCop",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

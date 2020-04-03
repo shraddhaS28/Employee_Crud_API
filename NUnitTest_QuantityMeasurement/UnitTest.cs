@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Tests.cs" company="Bridgelabz">
+// <copyright file="UnitTest.cs" company="Bridgelabz">
 // Copyright © 2020 Company="BridgeLabz".
 // </copyright>
 // <creator name="Shraddha Singh"/>
@@ -11,17 +11,12 @@ namespace NUnitTest_QuantityMeasurement
     using QuantityMeasurement;
 
     /// <summary>
-    /// Test Case Class
+    /// Test Case Class.
     /// </summary>
-    public class Tests
+    public class UnitTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         /// <summary>
-        /// TestCase 1
+        /// TestCase 1.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFeetValueNullCheck_WhenAnalyse_ShouldReturnTrue()
@@ -32,7 +27,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 2
+        /// TestCase 2.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFeetValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
@@ -43,7 +38,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 3
+        /// TestCase 3.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFeetValueTypeCheck_WhenAnalyse_ShouldReturnTrue()
@@ -54,18 +49,18 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 4
+        /// TestCase 4.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFeetValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Feet feet = new Feet(16);
-            double result = feet.getValue();
+            double result = feet.GetValue();
             Assert.AreEqual(16, result);
         }
 
         /// <summary>
-        /// TestCase 5
+        /// TestCase 5.
         /// </summary>
         [Test]
         public void GivenTestForEqualityInchValueNullCheck_WhenAnalyse_ShouldReturnTrue()
@@ -76,7 +71,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 6
+        /// TestCase 6.
         /// </summary>
         [Test]
         public void GivenTestForEqualityInchValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
@@ -87,7 +82,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 7
+        /// TestCase 7.
         /// </summary>
         [Test]
         public void GivenTestForEqualityInchValueTypeCheck_WhenAnalyse_ShouldReturnTrue()
@@ -98,68 +93,68 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 8
+        /// TestCase 8.
         /// </summary>
         [Test]
         public void GivenTestForEqualityInchValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Inch inch = new Inch(19);
-            double result = inch.getValue();
+            double result = inch.GetValue();
             Assert.AreEqual(19, result);
         }
 
         /// <summary>
-        /// TestCase 9
+        /// TestCase 9.
         /// </summary>
         [Test]
         public void Given1FeetIsEqualTo1Feet_WhenAnalyse_ShouldReturnEqual()
         {
             Feet feet = new Feet(1);
             double expected = 1;
-            double actual = feet.getValue();
+            double actual = feet.GetValue();
             Assert.AreEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 10
+        /// TestCase 10.
         /// </summary>
         [Test]
         public void Given1FeetIsEqualTo12Inch_WhenAnalyse_ShouldReturnEqual()
         {
             Feet feet = new Feet(1);
             MeasurementConversion conversion = new MeasurementConversion();
-            double expected = feet.getValue();
+            double expected = feet.GetValue();
             double actual = conversion.ConvertFromInchToFeet(12);
             Assert.AreEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 11
+        /// TestCase 11.
         /// </summary>
         [Test]
         public void Given1FeetIsNotEqualTo2Feet_WhenAnalyse_ShouldReturnNotEqual()
         {
             Feet feet = new Feet(2);
             double expected = 1;
-            double actual = feet.getValue();
+            double actual = feet.GetValue();
             Assert.AreNotEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 12
+        /// TestCase 12.
         /// </summary>
         [Test]
         public void Given1FeetIsEqualTo24Inch_WhenAnalyse_ShouldReturnNotEqual()
         {
             Feet feet = new Feet(1);
             MeasurementConversion conversion = new MeasurementConversion();
-            double expected = feet.getValue();
+            double expected = feet.GetValue();
             double actual = conversion.ConvertFromInchToFeet(24);
             Assert.AreNotEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 13
+        /// TestCase 13.
         /// </summary>
         [Test]
         public void GivenTestForEqualityKGValueNullCheck_WhenAnalyse_ShouldReturnTrue()
@@ -170,18 +165,18 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 14
+        /// TestCase 14.
         /// </summary>
         [Test]
         public void GivenTestForEqualityKGValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
         {
-            KiloGram kg = new KiloGram(); 
+            KiloGram kg = new KiloGram();
             bool result = kg.Equals(kg);
             Assert.IsTrue(result);
         }
 
         /// <summary>
-        /// TestCase 15
+        /// TestCase 15.
         /// </summary>
         [Test]
         public void GivenTestForEqualityKGValueTypeCheck_WhenAnalyse_ShouldReturnTrue()
@@ -192,18 +187,18 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 16
+        /// TestCase 16.
         /// </summary>
         [Test]
         public void GivenTestForEqualityKGValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             KiloGram kg = new KiloGram();
-            double result = kg.getValue(16);
+            double result = kg.GetValue(16);
             Assert.AreEqual(16, result);
         }
 
         /// <summary>
-        /// TestCase 17
+        /// TestCase 17.
         /// </summary>
         [Test]
         public void GivenTestForEqualityGramValueNullCheck_WhenAnalyse_ShouldReturnTrue()
@@ -214,7 +209,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 18
+        /// TestCase 18.
         /// </summary>
         [Test]
         public void GivenTestForEqualityGramValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
@@ -225,7 +220,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 19
+        /// TestCase 19.
         /// </summary>
         [Test]
         public void GivenTestForEqualityGramValueTypeCheck_WhenAnalyse_ShouldReturnTrue()
@@ -236,68 +231,68 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 20
+        /// TestCase 20.
         /// </summary>
         [Test]
         public void GivenTestForEqualityGramValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Gram gm = new Gram();
-            double result = gm.getValue(16);
+            double result = gm.GetValue(16);
             Assert.AreEqual(16, result);
         }
 
         /// <summary>
-        /// TestCase 21
+        /// TestCase 21.
         /// </summary>
         [Test]
         public void Given1GramIsEqualTo1Gram_WhenAnalyse_ShouldReturnEqual()
         {
             Gram gm = new Gram();
             double expected = 1;
-            double actual = gm.getValue(1);
+            double actual = gm.GetValue(1);
             Assert.AreEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 22
+        /// TestCase 22.
         /// </summary>
         [Test]
         public void Given1KiloGramIsEqualTo1000Gram_WhenAnalyse_ShouldReturnEqual()
         {
             KiloGram kg = new KiloGram();
             MeasurementConversion conversion = new MeasurementConversion();
-            double expected = kg.getValue(1);
+            double expected = kg.GetValue(1);
             double actual = conversion.ConvertFromGramToKilogram(1000);
             Assert.AreEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 23
+        /// TestCase 23.
         /// </summary>
         [Test]
         public void Given1GramIsNotEqualTo2Gram_WhenAnalyse_ShouldReturnNotEqual()
         {
             Gram gm = new Gram();
             double expected = 1;
-            double actual = gm.getValue(2);
+            double actual = gm.GetValue(2);
             Assert.AreNotEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 24
+        /// TestCase 24.
         /// </summary>
         [Test]
         public void Given1KiloGramIsEqualTo2000Gram_WhenAnalyse_ShouldReturnNotEqual()
         {
             KiloGram kg = new KiloGram();
             MeasurementConversion conversion = new MeasurementConversion();
-            double expected = kg.getValue(1);
+            double expected = kg.GetValue(1);
             double actual = conversion.ConvertFromGramToKilogram(2000);
             Assert.AreNotEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 25
+        /// TestCase 25.
         /// </summary>
         [Test]
         public void GivenTestForEqualityCelValueNullCheck_WhenAnalyse_ShouldReturnTrue()
@@ -308,7 +303,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 26
+        /// TestCase 26.
         /// </summary>
         [Test]
         public void GivenTestForEqualityCelValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
@@ -319,7 +314,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 27
+        /// TestCase 27.
         /// </summary>
         [Test]
         public void GivenTestForEqualityCelValueTypeCheck_WhenAnalyse_ShouldReturnTrue()
@@ -330,18 +325,18 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 28
+        /// TestCase 28.
         /// </summary>
         [Test]
         public void GivenTestForEqualityCelValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Celsius cel = new Celsius();
-            double result = cel.getValue(19);
+            double result = cel.GetValue(19);
             Assert.AreEqual(19, result);
         }
 
         /// <summary>
-        /// TestCase 29
+        /// TestCase 29.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFTValueNullCheck_WhenAnalyse_ShouldReturnTrue()
@@ -352,7 +347,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 30
+        /// TestCase 30.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFTValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
@@ -363,7 +358,7 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 31
+        /// TestCase 31.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFTValueTypeCheck_WhenAnalyse_ShouldReturnTrue()
@@ -374,62 +369,62 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 32
+        /// TestCase 32.
         /// </summary>
         [Test]
         public void GivenTestForEqualityFTValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Fahrenheit ft = new Fahrenheit();
-            double result = ft.getValue(20);
+            double result = ft.GetValue(20);
             Assert.AreEqual(20, result);
         }
 
         /// <summary>
-        /// TestCase 33
+        /// TestCase 33.
         /// </summary>
         [Test]
         public void Given1CelsiusIsEqualTo1Celsius_WhenAnalyse_ShouldReturnEqual()
         {
             Celsius cel = new Celsius();
             double expected = 1;
-            double actual = cel.getValue(1);
+            double actual = cel.GetValue(1);
             Assert.AreEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 34
+        /// TestCase 34.
         /// </summary>
         [Test]
         public void Given1CelsiusIsEqualTo33dot8Fahrenheit_WhenAnalyse_ShouldReturnEqual()
         {
             Celsius cel = new Celsius();
             MeasurementConversion conversion = new MeasurementConversion();
-            double expected = cel.getValue(1);
+            double expected = cel.GetValue(1);
             double actual = conversion.ConvertFromFahrenheitToCelsius(33.8);
             Assert.AreEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 35
+        /// TestCase 35.
         /// </summary>
         [Test]
         public void Given1CelIsNotEqualTo2Cel_WhenAnalyse_ShouldReturnNotEqual()
         {
             Celsius cel = new Celsius();
             double expected = 1;
-            double actual = cel.getValue(2);
+            double actual = cel.GetValue(2);
             Assert.AreNotEqual(expected, actual);
         }
 
         /// <summary>
-        /// TestCase 36
+        /// TestCase 36.
         /// </summary>
         [Test]
         public void Given1CelsiusIsEqualTo50Fahrenheit_WhenAnalyse_ShouldReturnNotEqual()
         {
             Celsius cel = new Celsius();
             MeasurementConversion conversion = new MeasurementConversion();
-            double expected = cel.getValue(1);
+            double expected = cel.GetValue(1);
             double actual = conversion.ConvertFromFahrenheitToCelsius(50);
             Assert.AreNotEqual(expected, actual);
         }
