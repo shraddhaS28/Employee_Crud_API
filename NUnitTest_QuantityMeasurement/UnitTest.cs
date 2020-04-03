@@ -190,5 +190,16 @@ namespace NUnitTest_QuantityMeasurement
             bool result = kg.Equals(new KiloGram());
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// TestCase 16
+        /// </summary>
+        [Test]
+        public void GivenTestForEqualityKGValueCheck_WhenAnalyse_ShouldReturnEqual()
+        {
+            KiloGram kg = new KiloGram();
+            int result = kg.getValue(16);
+            Assert.AreEqual(16, result);
+        }
     }
 }
