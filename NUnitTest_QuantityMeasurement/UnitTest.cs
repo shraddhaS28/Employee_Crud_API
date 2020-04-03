@@ -328,5 +328,16 @@ namespace NUnitTest_QuantityMeasurement
             bool result = cel.Equals(new Celsius());
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// TestCase 28
+        /// </summary>
+        [Test]
+        public void GivenTestForEqualityCelValueCheck_WhenAnalyse_ShouldReturnEqual()
+        {
+            Celsius cel = new Celsius();
+            double result = cel.getValue(19);
+            Assert.AreEqual(19, result);
+        }
     }
 }
