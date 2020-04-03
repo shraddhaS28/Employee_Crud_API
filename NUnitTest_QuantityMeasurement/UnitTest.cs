@@ -314,5 +314,17 @@ namespace NUnitTest_QuantityMeasurement
             int actual = gramValue.isValueEqual();
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 29
+        /// </summary>
+        [Test]
+        public void Compare_1kilogram_To_1000gram_When_Analyze_Should_return_Equal()
+        {
+            UnitCheck gramValue = new UnitCheck(1);
+            int expected = 1000;
+            int actual = gramValue.ConvertFromKGtoGram(1);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
