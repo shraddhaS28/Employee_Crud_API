@@ -19,7 +19,7 @@ namespace QuantityMeasurement
         /// <summary>
         /// private value of inch
         /// </summary>
-        private int inchValue;
+        private readonly double inchValue;
 
         /// <summary>
         /// Default Constructor
@@ -32,7 +32,7 @@ namespace QuantityMeasurement
         /// Parameterized Constructor
         /// </summary>
         /// <param name="inchValue"></param>
-        public Inch(int inchValue)
+        public Inch(double inchValue)
         {
             this.inchValue = inchValue;
         }
@@ -40,8 +40,8 @@ namespace QuantityMeasurement
         /// <summary>
         /// Method to get inch value
         /// </summary>
-        /// <returns></returns>
-        public int isValueEqual()
+        /// <returns> updated parameter value </returns>
+        public double GetValue()
         {
             return this.inchValue;
         }

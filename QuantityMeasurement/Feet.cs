@@ -1,4 +1,11 @@
-﻿namespace QuantityMeasurement
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Feet.cs" company="Bridgelabz">
+// Copyright © 2020 Company="BridgeLabz".
+// </copyright>
+// <creator name="Shraddha Singh"/>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace QuantityMeasurement
 {
     using System;
     using System.Collections.Generic;
@@ -12,20 +19,32 @@
         /// <summary>
         /// value of feet parameter
         /// </summary>
-        private int feetValue;
+        private double feetValue;
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public Feet()
         {
 
         }
 
         /// <summary>
-        /// Parameterized Constructor(Int Type)
+        /// Parameterized Constructor
         /// </summary>
         /// <param name="feetValue"></param>
-        public Feet(int feetValue)
+        public Feet(double feetValue)
         {
             this.feetValue = feetValue;
+        }
+
+        /// <summary>
+        /// to get value
+        /// </summary>
+        /// <returns> updated parameter value </returns>
+        public double GetValue()
+        {
+            return this.feetValue;
         }
 
         /// <summary>
@@ -40,11 +59,6 @@
             else
                 return false;
 
-        }
-
-        public int isValueEqual()
-        {
-            return this.feetValue;
         }
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.exe
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.deps.json
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.runtimeconfig.json
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.runtimeconfig.dev.json
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.dll
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.pdb
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.csprojAssemblyReference.cache
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.AssemblyInfoInputs.cache
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.AssemblyInfo.cs
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.dll
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.pdb
+C:\Users\bittu\Desktop\Employee_Crud_API\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.genruntimeconfig.cache

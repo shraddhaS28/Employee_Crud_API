@@ -20,14 +20,14 @@ namespace QuantityMeasurement
         /// <summary>
         /// private parameter
         /// </summary>
-        private int kgValue;
+        private double kgValue;
 
         /// <summary>
         /// method to get kilogram value.
         /// </summary>
         /// <param name="kgValue"></param>
-        /// <returns></returns>
-        public int getValue(int kgValue)
+        /// <returns>kilogram value </returns>
+        public double GetValue(double kgValue)
         {
             this.kgValue = kgValue;
             return this.kgValue;
@@ -37,7 +37,7 @@ namespace QuantityMeasurement
         /// Overridden Equals method
         /// </summary>
         /// <param name="obj"></param>
-        /// <returns></returns>
+        /// <returns>True or false</returns>
         public override bool Equals(object obj)
         {
             if( (obj == null) || object.ReferenceEquals(this, obj) || this.GetType().Equals(obj.GetType()) )

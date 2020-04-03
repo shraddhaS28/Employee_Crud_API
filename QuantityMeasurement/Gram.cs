@@ -19,14 +19,14 @@ namespace QuantityMeasurement
         /// <summary>
         /// private parameter
         /// </summary>
-        private int gramValue;
+        private double gramValue;
 
         /// <summary>
         /// Method to get gram value
         /// </summary>
         /// <param name="gramValue"></param>
-        /// <returns> integer value </returns>
-        public int getValue(int gramValue)
+        /// <returns> double value </returns>
+        public double GetValue(double gramValue)
         {
             this.gramValue = gramValue;
             return this.gramValue;

@@ -26,7 +26,7 @@ namespace QuantityMeasurement
         /// </summary>
         /// <param name="ftValue"></param>
         /// <returns> double value </returns>
-        public double getValue(double ftValue)
+        public double GetValue(double ftValue)
         {
             this.ftValue = ftValue;
             return this.ftValue;
