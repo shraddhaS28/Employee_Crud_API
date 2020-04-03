@@ -67,5 +67,15 @@ namespace QuantityMeasurement
             return feet * 12;
         }
 
+        /// <summary>
+        /// Method to convert inch value into feet
+        /// </summary>
+        /// /// <param name="inch"></param>
+        /// <returns> int value </returns>
+        public int ConvertFromInchToFeet(int inch)
+        {
+            return inch / 12;
+        }
+
     }
 }
