@@ -17,6 +17,22 @@ namespace QuantityMeasurement
     public class Gram
     {
         /// <summary>
+        /// private parameter
+        /// </summary>
+        private int gramValue;
+
+        /// <summary>
+        /// Method to get gram value
+        /// </summary>
+        /// <param name="gramValue"></param>
+        /// <returns> integer value </returns>
+        public int getValue(int gramValue)
+        {
+            this.gramValue = gramValue;
+            return this.gramValue;
+        }
+
+        /// <summary>
         /// Overridden Equals method
         /// </summary>
         /// <param name="obj"></param>
