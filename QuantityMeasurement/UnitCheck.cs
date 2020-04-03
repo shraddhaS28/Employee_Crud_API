@@ -111,7 +111,16 @@ namespace QuantityMeasurement
             return this.value * 3;
         }
 
-
+        /// <summary>
+        /// Method to convert kilogram value into gram
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public int ConvertFromKGtoGram(int value)
+        {
+            this.value = value;
+            return value * 1000;
+        }
 
         /// <summary>
         /// Overridden EqualsMethod.
