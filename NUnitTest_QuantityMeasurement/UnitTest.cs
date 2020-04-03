@@ -408,5 +408,17 @@ namespace NUnitTest_QuantityMeasurement
             double actual = conversion.ConvertFromFahrenheitToCelsius(33.8);
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 35
+        /// </summary>
+        [Test]
+        public void Given1CelIsNotEqualTo2Cel_WhenAnalyse_ShouldReturnNotEqual()
+        {
+            Celsius cel = new Celsius();
+            double expected = 1;
+            double actual = cel.getValue(2);
+            Assert.AreNotEqual(expected, actual);
+        }
     }
 }
