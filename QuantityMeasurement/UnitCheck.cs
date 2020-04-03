@@ -90,11 +90,31 @@ namespace QuantityMeasurement
         /// <summary>
         /// Method to convert inch value into yard
         /// </summary>
-        /// <param name="feet"></param>
+        /// <param name="inch"></param>
         /// <returns></returns>
         public int ConvertFromInchToYard(int inch)
         {
             return inch / 36;
+        }
+
+        /// <summary>
+        /// Method to convert inch value into yard
+        /// </summary>
+        /// <param name="yard"></param>
+        /// <returns></returns>
+        public int ConvertFromYardToInch(int yard)
+        {
+            return yard * 36;
+        }
+
+        /// <summary>
+        /// Method to convert inch value into yard
+        /// </summary>
+        /// <param name="yard"></param>
+        /// <returns></returns>
+        public int ConvertFromYardToFeet(int yard)
+        {
+            return yard * 3;
         }
     }
 }
