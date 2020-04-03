@@ -180,5 +180,17 @@ namespace NUnitTest_QuantityMeasurement
             int actual = check.ConvertFromFeetToInch(1);
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 1.17
+        /// </summary>
+        [Test]
+        public void Compare_12Inch_Equal_to_1Feet_When_analyze_return_True()
+        {
+            int expected = 1;
+            UnitCheck check = new UnitCheck();
+            int actual = check.ConvertFromInchToFeet(12);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
