@@ -175,7 +175,7 @@ namespace NUnitTest_QuantityMeasurement
         [Test]
         public void GivenTestForEqualityKGValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
         {
-            KiloGram kg = new KiloGram();
+            KiloGram kg = new KiloGram(); 
             bool result = kg.Equals(kg);
             Assert.IsTrue(result);
         }
