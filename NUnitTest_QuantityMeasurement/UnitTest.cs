@@ -288,7 +288,19 @@ namespace NUnitTest_QuantityMeasurement
             int expected = feet.isValueEqual();
             UnitCheck feetValue = new UnitCheck(2);
             int actual = feetValue.isValueEqual();
-            Assert.AreEqual(expected, actual);
+            Assert.AreNotEqual(expected, actual);
+        }
+        
+        /// <summary>
+        /// TestCase 27
+        /// </summary>
+        [Test]
+        public void Compare_1feet_To_24inch_When_Analyze_Should_return_False()
+        {
+            UnitCheck feet = new UnitCheck();
+            int actual = feet.ConvertFromFeetToInch(1);
+            int expected = 24;
+            Assert.AreNotEqual(expected, actual);
         }
     }
 }
