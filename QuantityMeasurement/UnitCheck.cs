@@ -44,6 +44,75 @@ namespace QuantityMeasurement
             return this.value;
         }
 
+
+        /// <summary>
+        /// Method to convert feet value into inch
+        /// </summary>
+        /// /// <param name="feet"></param>
+        /// <returns> int value </returns>
+        public int ConvertFromFeetToInch(int value)
+        {
+            this.value = value;
+            return this.value * 12;
+        }
+
+        /// <summary>
+        /// Method to convert inch value into feet
+        /// </summary>
+        /// /// <param name="inch"></param>
+        /// <returns> int value </returns>
+        public int ConvertFromInchToFeet(int value)
+        {
+            this.value = value;
+            return this.value / 12;
+        }
+
+        /// <summary>
+        /// Method to convert feet value into yard
+        /// </summary>
+        /// <param name="feet"></param>
+        /// <returns></returns>
+        public int ConvertFromFeetToYard(int value)
+        {
+            this.value = value;
+            return this.value / 3;
+        }
+
+        /// <summary>
+        /// Method to convert inch value into yard
+        /// </summary>
+        /// <param name="inch"></param>
+        /// <returns></returns>
+        public int ConvertFromInchToYard(int value)
+        {
+            this.value = value;
+            return this.value / 36;
+        }
+
+        /// <summary>
+        /// Method to convert inch value into yard
+        /// </summary>
+        /// <param name="yard"></param>
+        /// <returns></returns>
+        public int ConvertFromYardToInch(int value)
+        {
+            this.value = value;
+            return this.value * 36;
+        }
+
+        /// <summary>
+        /// Method to convert inch value into yard
+        /// </summary>
+        /// <param name="yard"></param>
+        /// <returns></returns>
+        public int ConvertFromYardToFeet(int value)
+        {
+            this.value = value;
+            return this.value * 3;
+        }
+
+
+
         /// <summary>
         /// Overridden EqualsMethod.
         /// </summary>
@@ -55,66 +124,6 @@ namespace QuantityMeasurement
                 return true;
 
             return false;
-        }
-
-        /// <summary>
-        /// Method to convert feet value into inch
-        /// </summary>
-        /// /// <param name="feet"></param>
-        /// <returns> int value </returns>
-        public int ConvertFromFeetToInch(int feet)
-        {
-            return feet * 12;
-        }
-
-        /// <summary>
-        /// Method to convert inch value into feet
-        /// </summary>
-        /// /// <param name="inch"></param>
-        /// <returns> int value </returns>
-        public int ConvertFromInchToFeet(int inch)
-        {
-            return inch / 12;
-        }
-
-        /// <summary>
-        /// Method to convert feet value into yard
-        /// </summary>
-        /// <param name="feet"></param>
-        /// <returns></returns>
-        public int ConvertFromFeetToYard(int feet)
-        {
-            return feet / 3;
-        }
-
-        /// <summary>
-        /// Method to convert inch value into yard
-        /// </summary>
-        /// <param name="inch"></param>
-        /// <returns></returns>
-        public int ConvertFromInchToYard(int inch)
-        {
-            return inch / 36;
-        }
-
-        /// <summary>
-        /// Method to convert inch value into yard
-        /// </summary>
-        /// <param name="yard"></param>
-        /// <returns></returns>
-        public int ConvertFromYardToInch(int yard)
-        {
-            return yard * 36;
-        }
-
-        /// <summary>
-        /// Method to convert inch value into yard
-        /// </summary>
-        /// <param name="yard"></param>
-        /// <returns></returns>
-        public int ConvertFromYardToFeet(int yard)
-        {
-            return yard * 3;
         }
     }
 }

@@ -277,5 +277,18 @@ namespace NUnitTest_QuantityMeasurement
             int actual = feetValue.isValueEqual();
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 26
+        /// </summary>
+        [Test]
+        public void Compare_1feet_To_2feet_When_Analyze_Should_return_False()
+        {
+            Feet feet = new Feet(1);
+            int expected = feet.isValueEqual();
+            UnitCheck feetValue = new UnitCheck(2);
+            int actual = feetValue.isValueEqual();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
