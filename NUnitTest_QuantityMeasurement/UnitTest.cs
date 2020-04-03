@@ -348,7 +348,7 @@ namespace NUnitTest_QuantityMeasurement
             UnitCheck gramValue = new UnitCheck(1);
             int expected = 2000;
             int actual = gramValue.ConvertFromKGtoGram(1);
-            Assert.AreEqual(expected, actual);
+            Assert.AreNotEqual(expected, actual);
         }
     }
 }
