@@ -282,5 +282,18 @@ namespace NUnitTest_QuantityMeasurement
             double actual = gm.getValue(2);
             Assert.AreNotEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 24
+        /// </summary>
+        [Test]
+        public void Given1KiloGramIsEqualTo2000Gram_WhenAnalyse_ShouldReturnNotEqual()
+        {
+            KiloGram kg = new KiloGram();
+            MeasurementConversion conversion = new MeasurementConversion();
+            double expected = kg.getValue(1);
+            double actual = conversion.ConvertFromGramToKilogram(2000);
+            Assert.AreNotEqual(expected, actual);
+        }
     }
 }
