@@ -245,5 +245,17 @@ namespace NUnitTest_QuantityMeasurement
             int result = gm.getValue(16);
             Assert.AreEqual(16, result);
         }
+
+        /// <summary>
+        /// TestCase 21
+        /// </summary>
+        [Test]
+        public void Given1GramIsEqualTo1Gram_WhenAnalyse_ShouldReturnEqual()
+        {
+            Gram gm = new Gram();
+            int expected = 1;
+            int actual = gm.getValue(1);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
