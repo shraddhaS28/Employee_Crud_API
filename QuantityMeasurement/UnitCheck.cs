@@ -77,10 +77,24 @@ namespace QuantityMeasurement
             return inch / 12;
         }
 
+        /// <summary>
+        /// Method to convert feet value into yard
+        /// </summary>
+        /// <param name="feet"></param>
+        /// <returns></returns>
         public int ConvertFromFeetToYard(int feet)
         {
             return feet / 3;
         }
 
+        /// <summary>
+        /// Method to convert inch value into yard
+        /// </summary>
+        /// <param name="feet"></param>
+        /// <returns></returns>
+        public int ConvertFromInchToYard(int inch)
+        {
+            return inch / 36;
+        }
     }
 }
