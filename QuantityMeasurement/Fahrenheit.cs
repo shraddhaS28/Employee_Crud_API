@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace QuantityMeasurement
+{
+    public class Fahrenheit
+    {
+        /// <summary>
+        /// Overridden Equals method
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>True or false</returns>
+        public override bool Equals(object obj)
+        {
+            if ((obj == null) || object.ReferenceEquals(this, obj) || this.GetType().Equals(obj.GetType()))
+                return true;
+            return false;
+        }
+    }
+}
