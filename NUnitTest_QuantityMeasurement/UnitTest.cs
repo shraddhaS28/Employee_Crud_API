@@ -60,7 +60,7 @@ namespace NUnitTest_QuantityMeasurement
         public void GivenTestForEqualityFeetValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Feet feet = new Feet(16);
-            int result = feet.getValue();
+            double result = feet.getValue();
             Assert.AreEqual(16, result);
         }
 
@@ -104,7 +104,7 @@ namespace NUnitTest_QuantityMeasurement
         public void GivenTestForEqualityInchValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Inch inch = new Inch(19);
-            int result = inch.getValue();
+            double result = inch.getValue();
             Assert.AreEqual(19, result);
         }
 
@@ -115,8 +115,8 @@ namespace NUnitTest_QuantityMeasurement
         public void Given1FeetIsEqualTo1Feet_WhenAnalyse_ShouldReturnEqual()
         {
             Feet feet = new Feet(1);
-            int expected = 1;
-            int actual = feet.getValue();
+            double expected = 1;
+            double actual = feet.getValue();
             Assert.AreEqual(expected, actual);
         }
 
@@ -128,8 +128,8 @@ namespace NUnitTest_QuantityMeasurement
         {
             Feet feet = new Feet(1);
             MeasurementConversion conversion = new MeasurementConversion();
-            int expected = feet.getValue();
-            int actual = conversion.ConvertFromInchToFeet(12);
+            double expected = feet.getValue();
+            double actual = conversion.ConvertFromInchToFeet(12);
             Assert.AreEqual(expected, actual);
         }
 
@@ -140,8 +140,8 @@ namespace NUnitTest_QuantityMeasurement
         public void Given1FeetIsNotEqualTo2Feet_WhenAnalyse_ShouldReturnNotEqual()
         {
             Feet feet = new Feet(2);
-            int expected = 1;
-            int actual = feet.getValue();
+            double expected = 1;
+            double actual = feet.getValue();
             Assert.AreNotEqual(expected, actual);
         }
 
@@ -153,8 +153,8 @@ namespace NUnitTest_QuantityMeasurement
         {
             Feet feet = new Feet(1);
             MeasurementConversion conversion = new MeasurementConversion();
-            int expected = feet.getValue();
-            int actual = conversion.ConvertFromInchToFeet(24);
+            double expected = feet.getValue();
+            double actual = conversion.ConvertFromInchToFeet(24);
             Assert.AreNotEqual(expected, actual);
         }
 
@@ -198,7 +198,7 @@ namespace NUnitTest_QuantityMeasurement
         public void GivenTestForEqualityKGValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             KiloGram kg = new KiloGram();
-            int result = kg.getValue(16);
+            double result = kg.getValue(16);
             Assert.AreEqual(16, result);
         }
 
@@ -242,7 +242,7 @@ namespace NUnitTest_QuantityMeasurement
         public void GivenTestForEqualityGramValueCheck_WhenAnalyse_ShouldReturnEqual()
         {
             Gram gm = new Gram();
-            int result = gm.getValue(16);
+            double result = gm.getValue(16);
             Assert.AreEqual(16, result);
         }
 
@@ -253,8 +253,21 @@ namespace NUnitTest_QuantityMeasurement
         public void Given1GramIsEqualTo1Gram_WhenAnalyse_ShouldReturnEqual()
         {
             Gram gm = new Gram();
-            int expected = 1;
-            int actual = gm.getValue(1);
+            double expected = 1;
+            double actual = gm.getValue(1);
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// TestCase 22
+        /// </summary>
+        [Test]
+        public void Given1KiloGramIsEqualTo1000Gram_WhenAnalyse_ShouldReturnEqual()
+        {
+            KiloGram kg = new KiloGram();
+            MeasurementConversion conversion = new MeasurementConversion();
+            double expected = kg.getValue(1);
+            double actual = conversion.ConvertFromGramToKilogram(1000);
             Assert.AreEqual(expected, actual);
         }
     }
