@@ -336,7 +336,7 @@ namespace NUnitTest_QuantityMeasurement
             UnitCheck gramValue = new UnitCheck(1);
             int expected = 2;
             int actual = gramValue.isValueEqual();
-            Assert.AreEqual(expected, actual);
+            Assert.AreNotEqual(expected, actual);
         }
     }
 }
