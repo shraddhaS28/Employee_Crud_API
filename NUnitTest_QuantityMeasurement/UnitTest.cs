@@ -157,5 +157,16 @@ namespace NUnitTest_QuantityMeasurement
             int actual = conversion.ConvertFromInchToFeet(24);
             Assert.AreNotEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 13
+        /// </summary>
+        [Test]
+        public void GivenTestForEqualityKGValueNullCheck_WhenAnalyse_ShouldReturnTrue()
+        {
+            KiloGram kg = new KiloGram();
+            bool result = kg.Equals(null);
+            Assert.IsTrue(result);
+        }
     }
 }
