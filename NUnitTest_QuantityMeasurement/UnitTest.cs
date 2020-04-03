@@ -383,5 +383,17 @@ namespace NUnitTest_QuantityMeasurement
             double result = ft.getValue(20);
             Assert.AreEqual(20, result);
         }
+
+        /// <summary>
+        /// TestCase 33
+        /// </summary>
+        [Test]
+        public void Given1CelsiusIsEqualTo1Celsius_WhenAnalyse_ShouldReturnEqual()
+        {
+            Celsius cel = new Celsius();
+            double expected = 1;
+            double actual = cel.getValue(1);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
