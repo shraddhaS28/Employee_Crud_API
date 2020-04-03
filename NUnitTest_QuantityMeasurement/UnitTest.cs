@@ -24,7 +24,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.1
         /// </summary>
         [Test]
-        public void Given_0_and_0_Feet_WhenAnalyse_Should_Return_Equal()
+        public void Given_0_and_0_Feet_When_Analyse_Should_Return_Equal()
         {
             int expected = 0;
             UnitCheck feet = new UnitCheck(0);
@@ -80,7 +80,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.7
         /// </summary>
         [Test]
-        public void Given_0_and_0_Inch_WhenAnalyse_Should_Return_Equal()
+        public void Given_0_and_0_Inch_When_Analyse_Should_Return_Equal()
         {
             int expected = 0;
             UnitCheck inch = new UnitCheck(0);
@@ -149,7 +149,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.14
         /// </summary>
         [Test]
-        public void Compare_1feet_Not_Equal_to_1inch_When_analyze_return_False()
+        public void Compare_1feet_Not_Equal_to_1inch_When_Analyze_return_False()
         {
             int expected = 1;
             UnitCheck check = new UnitCheck();
@@ -161,7 +161,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.15
         /// </summary>
         [Test]
-        public void Compare_1Inch_Not_Equal_to_1Feet_When_analyze_return_False()
+        public void Compare_1Inch_Not_Equal_to_1Feet_When_Analyze_return_False()
         {
             int expected = 1;
             UnitCheck check = new UnitCheck();
@@ -173,7 +173,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.16
         /// </summary>
         [Test]
-        public void Compare_1feet_Equal_to_12inch_When_analyze_return_True()
+        public void Compare_1feet_Equal_to_12inch_When_Analyze_return_True()
         {
             int expected = 12;
             UnitCheck check = new UnitCheck();
@@ -185,7 +185,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.17
         /// </summary>
         [Test]
-        public void Compare_12Inch_Equal_to_1Feet_When_analyze_return_True()
+        public void Compare_12Inch_Equal_to_1Feet_When_Analyze_return_True()
         {
             int expected = 1;
             UnitCheck check = new UnitCheck();
@@ -197,7 +197,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.18
         /// </summary>
         [Test]
-        public void Compare_3feet_Equal_to_1yard_When_analyze_return_True()
+        public void Compare_3feet_Equal_to_1yard_When_Analyze_return_True()
         {
             int expected = 1;
             UnitCheck check = new UnitCheck();
@@ -209,7 +209,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.19
         /// </summary>
         [Test]
-        public void Compare_1feet_Not_Equal_to_1yard_When_analyze_return_False()
+        public void Compare_1feet_Not_Equal_to_1yard_When_Analyze_return_False()
         {
             int expected = 1;
             UnitCheck check = new UnitCheck();
@@ -221,7 +221,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.20
         /// </summary>
         [Test]
-        public void Compare_1Inch_Not_Equal_to_1yard_When_analyze_return_False()
+        public void Compare_1Inch_Not_Equal_to_1yard_When_Analyze_return_False()
         {
             int expected = 1;
             UnitCheck check = new UnitCheck();
@@ -233,7 +233,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.21
         /// </summary>
         [Test]
-        public void Compare_1yard_Equal_to_36Inch_When_analyze_return_True()
+        public void Compare_1yard_Equal_to_36Inch_When_Analyze_return_True()
         {
             int expected = 36;
             UnitCheck check = new UnitCheck();
@@ -245,7 +245,7 @@ namespace NUnitTest_QuantityMeasurement
         /// TestCase 1.22
         /// </summary>
         [Test]
-        public void Compare_36inch_Equal_to_1Yard_When_analyze_return_True()
+        public void Compare_36inch_Equal_to_1Yard_When_Analyze_return_True()
         {
             int expected = 1;
             UnitCheck check = new UnitCheck();
@@ -254,14 +254,27 @@ namespace NUnitTest_QuantityMeasurement
         }
 
         /// <summary>
-        /// TestCase 1.23
+        /// TestCase 1.23/1.24(Refactor)
         /// </summary>
         [Test]
-        public void Compare_1yard_Equal_to_3feet_When_analyze_return_True()
+        public void Compare_1yard_Equal_to_3feet_When_Analyze_return_True()
         {
             int expected = 3;
             UnitCheck check = new UnitCheck();
             int actual = check.ConvertFromYardToFeet(1);
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// TestCase 25
+        /// </summary>
+        [Test]
+        public void Compare_1feet_To_1feet_When_Analyze_Should_return_Equal()
+        {
+            Feet feet = new Feet(1);
+            int expected = feet.isValueEqual();
+            UnitCheck feetValue = new UnitCheck(1);
+            int actual = feetValue.isValueEqual();
             Assert.AreEqual(expected, actual);
         }
     }
