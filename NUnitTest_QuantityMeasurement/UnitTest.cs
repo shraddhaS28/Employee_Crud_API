@@ -212,5 +212,16 @@ namespace NUnitTest_QuantityMeasurement
             bool result = gm.Equals(null);
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// TestCase 18
+        /// </summary>
+        [Test]
+        public void GivenTestForEqualityGramValueReferenceCheck_WhenAnalyse_ShouldReturnTrue()
+        {
+            Gram gm = new Gram();
+            bool result = gm.Equals(gm);
+            Assert.IsTrue(result);
+        }
     }
 }
