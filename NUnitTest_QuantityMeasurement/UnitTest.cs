@@ -302,5 +302,17 @@ namespace NUnitTest_QuantityMeasurement
             int expected = 24;
             Assert.AreNotEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TestCase 28
+        /// </summary>
+        [Test]
+        public void Compare_1gram_To_1gram_When_Analyze_Should_return_Equal()
+        {
+            UnitCheck gramValue = new UnitCheck(1);
+            int expected = 1;
+            int actual = gramValue.isValueEqual();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
