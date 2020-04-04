@@ -12,6 +12,16 @@
     public class EmployeeModel
     {
         /// <summary>
+        /// Employee's First Name
+        /// </summary>
+        private string firstName;
+
+        /// <summary>
+        /// Employee's Last Name
+        /// </summary>
+        private string lastName;
+
+        /// <summary>
         /// Employee's Email
         /// </summary>
         private string email;
@@ -41,6 +51,31 @@
         /// </summary>
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
+        public string FirstName
+        {
+            get
+            {
+                return this.firstName;
+            }
+            set
+            {
+                this.firstName = value;
+            }
+
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return this.lastName;
+            }
+            set
+            {
+                this.lastName = value;
+            }
+        }
+
         public int EmpId
         {
             get
