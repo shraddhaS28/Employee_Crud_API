@@ -9,8 +9,8 @@ using Repository.UserContext;
 namespace Repository.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20200324081452_emplyeeTable")]
-    partial class emplyeeTable
+    [Migration("20200404093726_Employee")]
+    partial class Employee
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,21 +20,24 @@ namespace Repository.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Model.Employee", b =>
+            modelBuilder.Entity("Model.EmployeeModel", b =>
                 {
-                    b.Property<int>("EmpId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("FirstName")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Address");
 
                     b.Property<string>("Email");
 
+                    b.Property<int>("EmpId");
+
+                    b.Property<string>("LastName");
+
                     b.Property<string>("Mobile");
 
                     b.Property<string>("Password");
 
-                    b.HasKey("EmpId");
+                    b.HasKey("FirstName");
 
                     b.ToTable("Employees");
                 });
