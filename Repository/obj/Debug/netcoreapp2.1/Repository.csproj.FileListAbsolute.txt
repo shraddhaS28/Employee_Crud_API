@@ -24,3 +24,5 @@ C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1
 C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.csproj.CopyComplete
 C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.dll
 C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.pdb
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.genruntimeconfig.cache
+C:\Users\bittu\source\repos\Employee_Crud_API\Repository\obj\Debug\netcoreapp2.1\Repository.csproj.CoreCompileInputs.cache

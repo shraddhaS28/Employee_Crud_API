@@ -5,6 +5,7 @@
     using Repository.UserContext;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
@@ -71,7 +72,7 @@
         /// <summary>
         /// method to update existed employee data
         /// </summary>
-        /// <param name="employeeChanges"></param>
+        /// <param name="employeeChanges"></param> 
         /// <returns> Updated Employee Data </returns>
         public Task<int> UpdateEmployee(EmployeeModel employeeChanges)
         {
@@ -79,6 +80,23 @@
             employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             var result = userDBContext.SaveChangesAsync();
             return result;
+        }
+
+        /// <summary>
+        /// Employee Login
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public bool LoginEmployee(string email, string password)
+        {
+            var result = userDBContext.Employees.Where(id => id.Email == email && id.Password == password);
+
+            if (result != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
