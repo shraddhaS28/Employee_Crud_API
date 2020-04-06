@@ -116,7 +116,7 @@
         /// </summary>
         /// <param name="email"></param>
         /// <param name="password"></param>
-        /// <returns> employee Login </returns>
+        /// <returns> employee Login. </returns>
         [Route("LoginEmployee")]
         [HttpPost]
         public IActionResult LoginEmployee(string email, string password)
