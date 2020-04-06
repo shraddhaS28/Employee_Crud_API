@@ -110,5 +110,26 @@
             return this.manager.GetEmployee(id);
             Log.Information("Method will show data of one employee using employee id");
         }
+
+        /// <summary>
+        /// Validate Employee Login
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns> employee Login </returns>
+        [Route("LoginEmployee")]
+        [HttpPost]
+        public IActionResult LoginEmployee(string email, string password)
+        {
+            var result = this.manager.LoginEmployee(email, password);
+            if (result == true)
+            {
+                return this.Ok(email);
+            }
+            else
+            {
+                return this.BadRequest();
+            }
+        }
     }
 }
