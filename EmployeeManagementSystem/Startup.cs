@@ -76,7 +76,14 @@
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseStaticFiles();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=EmployeeController}/{action=LoginEmployee}/{id?}"
+                    );
+            });
         }
     }
 }
