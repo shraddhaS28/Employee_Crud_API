@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <title>login</title>
+
+</head>
+
+<body height=100%; class="bg" style="background-image: url(Background.jfif)">
+    <div class="imgcontainer">
+        <img src="myAvatar (1).png" alt="Avatar" class="avatar">
+    </div>
+    <form action="#"  class="form" method="post" name="myForm" id="f" onsubmit="return valid();">
+
+        <div class="container">
+            <label for="username"></label>
+            <p>Username</p>
+            <input type="text" placeholder="Enter Username" name="username" id="uname" required onchange="checkEmpty()">
+        
+            <label for="psword"></label>
+            <p>Password</p>
+            <input type="password" placeholder="Enter Password" name="psword" id="psw" required onchange="checkEmpty()">
+        </div>
+        <div class="container">
+
+            <button type="submit" id="submitButton" >Login</button>
+            <label>
+                <input type="checkbox" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <label class="psw">Forgot password? <a href="#">Click Here</a></label>
+            <label class="container">New User? <a href="#">Register Here</a></label>
+        </div>
+    </form>
+
+</body>
+</html>
