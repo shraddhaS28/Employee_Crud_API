@@ -71,5 +71,16 @@
         {
             return this.repo.UpdateEmployee(employeeChanges);
         }
+
+        /// <summary>
+        /// Employee Login
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public bool LoginEmployee(string email, string password)
+        {
+            return this.repo.LoginEmployee(email, password);
+        }
     }
 }
