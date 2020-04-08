@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Greeting UI</title>
 </head>
 <body class="bg" style="background-position:top center;  background-image: url(Background.jfif)">
@@ -12,7 +11,7 @@
     <a href="#" class="container">Register</a>
     <p></p>
     <button>Add Employee</button><br><br>
-    <p style="font-size:xx-large; color: red"> NO RECORD FOUND !!</p>
+    <p style="font-size:xx-large; color: red" id="hide" hidden> NO RECORD FOUND !!</p>
     <div class="container">
         <table style="background-color:white; color:black; font-size:large" id="tbl" class="w3-table w3-bordered w3-striped">
             <tr>
@@ -27,11 +26,14 @@
         </table>
     </div>
     <script>
-        var xHttp = new XMLHttpRequest();
+         var xHttp = new XMLHttpRequest();
         xHttp.open("GET", 'https://localhost:44338/api/Values/GetAllEmployee');
         xHttp.onload = function () {
             var tableBody = JSON.parse(xHttp.responseText);
-            console.log(tableBody);
+            if (tableBody == null)
+            {
+                 document.getElementById("hide").hidden = false;
+            }
             var html = "";
             for (var a = 0; a < tableBody.length; a++) {
                 var firstName = tableBody[a].firstName;
@@ -42,18 +44,15 @@
                 html += "<td>" + firstName + "</td>";
                 html += "<td>" + lastName + "</td>";
                 html += "<td>" + email + "</td>";
-                html += `<td><i class='fas fa-edit' style='font-size:24px'></i></td>`;
-                html += `<td><i class='fas fa-trash' style='font-size:24px'></i></td>`;
+                html += '<td><input type="image" src="edit.jpg" alt="Submit" width="40" height="42"></td>';
+                html += '<td><input type="image" src="delete.png" alt="Submit" width="40" height="40"></td>';
                 html += "</tr>";
-                function editFunction() {
-                    var xHttp = new XMLHttpRequest();
-                    xHttp.open("GET", 'https://localhost:44338/api/Values/UpdateEmployee');
-                }
             }
             document.getElementById("tableBody").innerHTML += html;
         }
 
         xHttp.send();
+       
     </script>
 
 </body>
