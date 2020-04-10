@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html> 
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
@@ -11,7 +11,7 @@
     <div class="imgcontainer">
         <img src="myAvatar (1).png" alt="Avatar" class="avatar">
     </div>
-    <form action="#"  class="form" method="post" name="myForm" id="f" onsubmit="return valid();">
+    <form class="form" method="post" name="myForm" id="f" onsubmit="return valid();">
 
         <div class="container">
             <label for="username"></label>
@@ -24,7 +24,7 @@
         </div>
         <div class="container">
 
-            <button type="submit" id="submitButton" >Login</button>
+            <button type="submit" id="submitButton">Login</button>
             <label>
                 <input type="checkbox" name="remember"> Remember me
             </label>
@@ -36,6 +36,39 @@
             <label class="container">New User? <a href="#">Register Here</a></label>
         </div>
     </form>
+
+    <script>
+        var uName = $("#uname").val();
+        var pWord = $("#psw").val();
+
+        $(function () {
+            $("#submitButton").click(function () {
+                event.preventDefault();
+                var formData = {
+                    "email": document.getElementById("uname").value(),
+                    "password": document.getElementById("psw").value()
+                }
+                var data = JSON.stringify(formData);
+                $.ajax({
+                    url: "api/values/LoginEmployee",
+                    type: 'POST',
+                    cache: false,
+                    contentType: 'application/JSON',
+                    processData: false,
+                    data: data,
+                    success: function (response) {
+                        if (response == data.email) {
+                            window.location = 'https://localhost:44338/GreetingUi.html'
+                            alert("Employee Verified Sucessfully");
+                        }
+                        else {
+                            alert("Employee Data not available");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
