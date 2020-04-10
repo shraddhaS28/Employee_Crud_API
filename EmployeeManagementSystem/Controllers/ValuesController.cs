@@ -112,19 +112,18 @@
         }
 
         /// <summary>
-        /// Validate Employee Login
+        /// Validate employee login.
         /// </summary>
-        /// <param name="email"></param>
-        /// <param name="password"></param>
-        /// <returns> employee Login. </returns>
+        /// <param name="employeeModel"></param>
+        /// <returns>employee login</returns>
         [Route("LoginEmployee")]
         [HttpPost]
-        public IActionResult LoginEmployee(string email, string password)
+        public IActionResult LoginEmployee(EmployeeModel employeeModel)
         {
-            var result = this.manager.LoginEmployee(email, password);
+            var result = this.manager.LoginEmployee(employeeModel.Email, employeeModel.Password);
             if (result == true)
             {
-                return this.Ok(email);
+                return this.Ok(employeeModel.Email);
             }
             else
             {
