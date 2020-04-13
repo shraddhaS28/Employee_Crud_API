@@ -19,7 +19,7 @@ namespace QuantityMeasurement
         /// <summary>
         /// value of feet parameter
         /// </summary>
-        private double feetValue;
+        private readonly double feetValue;
 
         /// <summary>
         /// Default Constructor
