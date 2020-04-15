@@ -28,6 +28,47 @@
   color: #61dafb;
 }
 
+.input-email-div{
+  border: 1px solid #aaa;
+    outline: none;
+    height: 30px;
+    padding-left: 3px;
+    border-radius: 4px;
+}
+.email-div{
+  padding: 5px;
+}
+.html-div{
+  height:100%;
+  width:100%;
+}
+div#root {
+  height: 100%;
+}
+button.submit {
+  border-radius: 4px;
+  background-color: rgb(33, 221, 33);
+  color: #fff;
+  border: 1px solid green;
+  outline: navajowhite;
+}
+.app-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-Test-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
