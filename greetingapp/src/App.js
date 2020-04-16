@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { Home } from './Components/Home'
 import  Login  from './Components/Login'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import EmployeeData from './Components/EmployeeData';
 
 class App extends Component {
   constructor(props) {
@@ -13,9 +14,9 @@ class App extends Component {
     return (
       <Router>
         <Switch>
+          <Route path='/' component={EmployeeData} exact />
           <Route path='/' component={Login} exact />
           <Route path='/login' component={Login} />
-          <Route path='/home' component={Home} />
         </Switch>
       </Router>
     );
