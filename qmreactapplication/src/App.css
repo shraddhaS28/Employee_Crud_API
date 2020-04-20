@@ -1,0 +1,33 @@
+#main-div {
+  display: flex;
+   flex-direction: column;
+   border: 2px solid black;
+   border-radius: 4px;
+   padding: 10px;
+ }
+ #measurementType{
+   display: flex;
+   size: 10vh;
+ }
+ #main-typeconversion-div{
+   display: flex;
+ }
+ #main-label{
+   display: flex;
+   /*flex-direction: column;*/
+   /* width: 30%;  */
+ }
+ 
+ #equalIcon{
+    margin-top: 8vh;  
+ }
+ #formula-label{
+   background-color: #f9a825;
+   color: white;
+   font-weight: bold;
+   padding: 8px;
+   border-radius: 5px;
+ }
+ select#measurementType {
+   background: whiteSmoke;
+ }
