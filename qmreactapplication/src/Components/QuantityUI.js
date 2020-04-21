@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import MeasureMentUI from './MeasureMentUI';
 import LeftBox from './LeftBox';
 import RightBox from './RightBox';
+import formula from './Formula';
+
 class QuantityUI extends Component {
     state = {
         showType: false,
@@ -56,17 +58,10 @@ class QuantityUI extends Component {
             inputTypeLeft: inputTypeLeft
         })
         console.log(this.state.inputTypeLeft);
-        const input = this.state.inputTypeLeft;
-        const data = {
-            Feet: input
-        }
-
-        // const response = feetToInch('https://localhost:44338/api/Values/FeettoInch',data);
-        // response.then(res=>{
-        //     this.setState({
-        //         inputTypeRight:res.data
-        //     })
-        // })
+        //const input = this.state.inputTypeLeft;
+        // const data = {
+        //     Feet: input
+        // }
     }
 
     render() {
@@ -77,6 +72,10 @@ class QuantityUI extends Component {
                     <LeftBox inputTypeLeft={this.inputTypeLeftChangeHandler} selectTypeLeft={this.selectTypeLeftChangeHandler} showType={this.state.showType} />
                     <RightBox inputTypeRight={this.inputTypeRightChangeHandler} selectTypeRight={this.selectTypeRightChangeHandler}  valueRight={this.state.inputTypeRight} showType={this.state.showType} />
                 </div>
+                <div>
+                <formula>Formula:</formula>
+                </div>
+                
             </div>
         )
     }
