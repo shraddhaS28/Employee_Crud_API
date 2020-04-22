@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import MeasureMentUI from './MeasureMentUI';
 import LeftBox from './LeftBox';
 import RightBox from './RightBox';
-import formula from './Formula';
+import Formula from './Formula';
+import logo from '../iconfinder_equal_103540.png'
 
 class QuantityUI extends Component {
     state = {
@@ -17,13 +18,11 @@ class QuantityUI extends Component {
         const type = event.target.value;
         console.log(type);
         if (type === "Length") {
-            console.log('inside length');
             this.setState({
                 showType: true
             })
         }
         else if (type === "Weight") {
-            console.log('inside weight');
             this.setState({
                 showType: false
             })
@@ -36,7 +35,6 @@ class QuantityUI extends Component {
         this.setState({
             selectTypeLeft: selectTypeLeft
         })
-        console.log(this.state.selectTypeLeft);
     }
 
     selectTypeRightChangeHandler = (event) => {
@@ -58,22 +56,22 @@ class QuantityUI extends Component {
             inputTypeLeft: inputTypeLeft
         })
         console.log(this.state.inputTypeLeft);
-        //const input = this.state.inputTypeLeft;
-        // const data = {
-        //     Feet: input
-        // }
     }
 
     render() {
         return (
-            <div className='container m-5 d-flex justify-content-center' id='main-div'>
+            <div className='container m-5 d-flex' id='main-div'>
+                <div className='headline'>
+                    <header>Quantity MeasureMent UI</header>
+                </div>
                 <MeasureMentUI measurementTypeChanged={this.measurementTypeHandler} />
                 <div className='row' id='main-typeconversion-div'>
                     <LeftBox inputTypeLeft={this.inputTypeLeftChangeHandler} selectTypeLeft={this.selectTypeLeftChangeHandler} showType={this.state.showType} />
+                    <img src={logo} alt="Equals" id="equalIcon"/>
                     <RightBox inputTypeRight={this.inputTypeRightChangeHandler} selectTypeRight={this.selectTypeRightChangeHandler}  valueRight={this.state.inputTypeRight} showType={this.state.showType} />
                 </div>
-                <div>
-                <formula>Formula:</formula>
+                <div className='formula'>
+                    <Formula selectTypeLeft={this.state.selectTypeLeft} selectTypeRight={this.state.selectTypeRight}/>
                 </div>
                 
             </div>
