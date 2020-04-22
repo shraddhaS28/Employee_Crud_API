@@ -13,8 +13,8 @@ class LeftBox extends Component{
                     <>
                 <option name="length">Feet</option>
                 <option name="length">Inch</option>
-                <option name="length">meter</option>
-                <option name="length">centimeter</option></> : <>
+                <option name="length">Meter</option>
+                <option name="length">Centimeter</option></> : <>
                 <option name="weight">Kilogram</option>
                 <option name="weight">Gram</option>
                 </>
