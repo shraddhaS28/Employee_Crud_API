@@ -3,14 +3,67 @@
 }
 
 .MainHeader{
-  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+#search{
+  border: 1px solid #aaa;
+  outline: none;
+  height: 30px;
+  width: 400px;
+  border-radius: 6px;
+  position: relative;
+  left: 60px;
+  text-align: left;
+}
+
+.note-div{
+  position: relative;
+  top: 90px;  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#note-button{
+  background-color: rgba(203, 211, 216, 0.719);
+  color: black;
+  width: 400px;
+  font-size: larger;
+}
+
+.notes-display-div{
+  display: flex;
+  flex-wrap: wrap;
+  width : 1200px;
+  padding: 10px 10px 10px 10px;
+}
+.note-card{
+  width: 200px;
+  border-radius: 15px;
+  border: 2px solid;
+  margin: auto;
+  box-shadow: midnightblue;
+  position: relative;
+  top: 150px;
+}
+input.form-control {
+  width: 400px;
+  height: 50px;
+  margin: 5px;
+}
+
+input[type="text"] {
+  width: 500px;
 }

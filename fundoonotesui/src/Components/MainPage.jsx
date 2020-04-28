@@ -10,7 +10,10 @@ export default class MainPage extends React.Component{
         }
     }
     noteChangeHandler = (event) => {
-      
+       const noteChange = event.target.value;  
+       this.setState({
+           noteChange: noteChange
+       })
     }
     drawerChangeHandler = (event) => {
         const drawerChange = event.target.value;
@@ -22,9 +25,7 @@ export default class MainPage extends React.Component{
     render() {
         return(
             <div id='main-div'>
-                
                 <Drawer drawerChange={this.drawerChangeHandler} />
-
                 <Note noteChange={this.noteChangeHandler} />
                 
             </div>
