@@ -1,5 +1,6 @@
 import React from 'react';
 import Note from './Note';
+import Drawer from './Drawer'
 
 export default class MainPage extends React.Component{
     constructor(props){
@@ -9,19 +10,23 @@ export default class MainPage extends React.Component{
         }
     }
     noteChangeHandler = (event) => {
-       const noteChange = event.target.value;  
-       this.setState({
-           noteChange: noteChange
-       })
+      
+    }
+    drawerChangeHandler = (event) => {
+        const drawerChange = event.target.value;
+        this.setState({
+            drawerChange: drawerChange
+        })
     }
 
     render() {
         return(
             <div id='main-div'>
-                <div className='MainHeader'>
-                    <h1>Keep Notes</h1>
-                </div>
+                
+                <Drawer drawerChange={this.drawerChangeHandler} />
+
                 <Note noteChange={this.noteChangeHandler} />
+                
             </div>
         )
     }
