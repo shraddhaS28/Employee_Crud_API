@@ -5,53 +5,58 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Edit';
+import {Delete, Edit, AddAlert, AddAPhoto, ColorLens} from '@material-ui/icons';
 
 export default class NoteCard extends Component {
-   state={
-       show : false
-   }
 
-   showChangeHandler=()=>{
-    const shouldShow = this.state.show;   
-    this.setState({
-        show : !shouldShow
-       })
-   }
     render() {
         return (
             <div className='notes-display-div'>
                 {
-                    this.props.notes.map((note, key) => {
+                    this.props.notes.map((note) => {
                         return (
                             <>
-                                <Card className='note-card' key={key}>
+                                <Card className='note-card' key={note.id}>
                                     <CardActionArea >
-                                        <CardContent id='card-content' onClick={this.showChangeHandler}>
-                                            <Typography gutterBottom variant="h5" component="h2">
+                                        <CardContent id='card-content' >
+                                            <Typography gutterBottom variant="Bold" component="h2">
                                                 {note.title}
                                             </Typography>
-                                            <Typography id='note-content' variant="body 2" color="textSecondary" component="p">
+                                            <Typography id='note-content' variant="body2" color="textSecondary" component="p">
                                                 {note.note}
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
-                                    {
-                                        this.state.show ? <CardActions>
+                                       <CardActions>
+
+                                       <Button
+                                            variant='outlined'
+                                            color='default'
+                                            startIcon={<AddAlert />}
+                                        />
+                                        <Button
+                                            variant='outlined'
+                                            color="default"
+                                            startIcon={<AddAPhoto />}
+                                        />
+                                        <Button
+                                            variant='outlined'
+                                            color="default"
+                                            startIcon={<ColorLens />}
+                                        />
                                         <Button variant='contained'
                                             color="white"
-                                            startIcon={<EditIcon />}
+                                            background-width='1px'
+                                            startIcon={<Edit />}
                                         >
                                         </Button>
                                         <Button
                                             variant="contained"
                                             color="white"
-                                            startIcon={<DeleteIcon />}
-                                        >
-                                        </Button>
-                                    </CardActions> : null
-                                    } 
+                                            startIcon={<Delete />}
+                                        />
+                                    </CardActions>
+
                                     
                                 </Card>
 
