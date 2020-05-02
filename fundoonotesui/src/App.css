@@ -2,13 +2,15 @@
   text-align: center;
 }
 
-.MainHeader{
+.main-div{
+  text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
   align-items: center;
-  justify-content: space-around;
 }
-.header-center{
+
+.MainHeader{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +22,7 @@
   border: 1px solid #aaa;
   outline: none;
   height: 30px;
-  width: 400px;
+  width: 600px;
   border-radius: 6px;
   position: relative;
   left: 60px;
@@ -28,42 +30,61 @@
 }
 
 .note-div{
-  position: relative;
-  top: 90px;  
+  /* position: relative;
+  top: 90px;   */
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: white;
+  height: 300px;
 }
 
-#note-button{
-  background-color: rgba(203, 211, 216, 0.719);
-  color: black;
-  width: 400px;
-  font-size: larger;
+.title-note-div{
+  display: flex;
+  flex-direction: column;
+  border: outset;
+  border-radius: 6px;
 }
 
 .notes-display-div{
   display: flex;
   flex-wrap: wrap;
-  width : 1200px;
-  padding: 10px 10px 10px 10px;
+  margin-right: 10%;
+  margin-left: 10%;
+  justify-content: center; 
 }
 .note-card{
-  width: 200px;
-  border-radius: 15px;
-  border: 2px solid;
-  margin: auto;
-  box-shadow: midnightblue;
-  position: relative;
-  top: 150px;
+  margin: 10px;
+  border: outset;
+ width: 500px;
 }
-input.form-control {
-  width: 400px;
-  height: 50px;
-  margin: 5px;
+
+.note-btn-div{
+  display:flex;
+  justify-content: flex-start;
+  width:100%;
+  
 }
 
 input[type="text"] {
+  border-radius: 6px;
   width: 500px;
+  border: outset;
+}
+
+.MuiButton-outline{
+  border: 0px !important;
+  outline: none !important;
+}
+.MuiInputBase-inputMultiline{
+  height: 80px !important;
+}
+
+.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+  top: 25px;
+}
+
+#AppHeader{
+  width: 100%;
 }
