@@ -32,14 +32,12 @@
 }
 
 .note-div{
-  /* position: relative;
-  top: 90px;   */
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  height: 350px;
+  height: 300px;
 }
 
 .title-note-div{

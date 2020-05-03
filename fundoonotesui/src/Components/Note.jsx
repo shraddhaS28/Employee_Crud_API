@@ -25,12 +25,7 @@ export default class Note extends Component{
                         />
                         <div className='note-btn-div'>
                             <div>
-                            <Button 
-                                variant = 'outlined'
-                                color='default'
-                                startIcon ={<AddCircleOutline/>}
-                                onClick = {this.props.saveChangeHandler}
-                                /> 
+                            
                                 <Button 
                                 variant = 'outlined'
                                 color='default'
@@ -50,7 +45,8 @@ export default class Note extends Component{
                                 <div className='sub-btn-div'>                 
                                 <Button 
                                 variant='outlined'
-                                color="default" onClick={this.props.handleClose}>
+                                color="secondary"
+                                onClick={this.props.handleClose}>
                                 Close
                                 </Button>
                                 </div>

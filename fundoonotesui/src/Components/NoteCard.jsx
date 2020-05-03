@@ -19,7 +19,7 @@ export default class NoteCard extends Component {
                                 <Card className='note-card' key={note.id}>
                                     <CardActionArea >
                                         <CardContent id='card-content' >
-                                            <Typography gutterBottom variant="Bold" component="h2">
+                                            <Typography  variant="subtitle1" component="h2">
                                                 {note.title}
                                             </Typography>
                                             <Typography id='note-content' variant="body2" color="textSecondary" component="p">
@@ -27,39 +27,43 @@ export default class NoteCard extends Component {
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
-                                       <CardActions>
-
+                                       <CardActions className='note-btn-div'>
+                                        <div>
                                        <Button
                                             variant='outlined'
                                             color='default'
+                                            size='small'
                                             startIcon={<AddAlert />}
+                                        />
+                                        <Button
+                                            variant="outlined"
+                                            color="default"
+                                            size='small'
+                                            startIcon={<Delete />}
+                                            onClick={()=>{this.props.deleteNoteHandler(note.id)}}
                                         />
                                         <Button
                                             variant='outlined'
                                             color="default"
+                                            size='small'
                                             startIcon={<AddAPhoto />}
                                         />
                                         <Button
                                             variant='outlined'
                                             color="default"
+                                            size='small'
                                             startIcon={<ColorLens />}
                                         />
-                                        <Button variant='contained'
-                                            color="white"
-                                            background-width='1px'
+                                        <Button variant='outlined'
+                                            color="default"
+                                            size='small'
                                             startIcon={<Edit />}
+                                            onClick= {this.props.EditBoxHandler}
                                         >
                                         </Button>
-                                        <Button
-                                            variant="contained"
-                                            color="white"
-                                            startIcon={<Delete />}
-                                        />
+                                        </div>
                                     </CardActions>
-
-                                    
                                 </Card>
-
                             </>
                         )
                     })

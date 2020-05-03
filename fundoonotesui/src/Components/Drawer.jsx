@@ -102,11 +102,9 @@ export default function MiniDrawer(props) {
               onClick={handleDrawerOpen}
               edge="start"
               transition= 'width 2s'
-              className={clsx(classes.menuButton, {
-                [classes.hide]: open,
-              })}
+              className={clsx(classes.menuButton)}
             >
-              <Menu />
+            <Menu />
             </IconButton>
               <Typography>Keep Notes</Typography>
               </div>
