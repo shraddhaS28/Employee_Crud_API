@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import Note from './Note';
 import Drawer from './Drawer'
 import NoteCard from './NoteCard';
+import EditNote from './EditNote'
 
 export default class MainPage extends Component{
    
     state = {
         showField: false,
+        showEditBox: false,
         title: '',
         note: '',
         notes: [],
@@ -87,24 +89,45 @@ export default class MainPage extends Component{
         })
 
     }
+
+    EditBoxHandler=()=>{
+        const doesShowEditBox = this.state.showEditBox;
+        this.setState({
+            showEditBox : !doesShowEditBox
+        })
+    }
+
+    handleEditClose = async () =>{
+        const doesShowEditBox = this.state.showEditBox;
+        await this.setState({
+            showEditBox : !doesShowEditBox
+        })  
+    }
+
     render() {
         return(
             <div id='main-div'>
                 <Drawer drawerChange={this.drawerChangeHandler} />
                 <Note 
-                noteChange={this.noteChangeHandler}
+                noteChangeHandler={this.noteChangeHandler}
                 handleClose = {this.handleClose}
                 showFieldHandler = {this.showFieldHandler}
                 showField = {this.state.showField} 
                 titleChangeHandler = {this.titleChangeHandler}
                 saveChangeHandler ={this.saveChangeHandler}
+                searchHandler = {this.searchHandler}
                 
                 />
             
                 <NoteCard notes={this.state.notes} 
                     deleteNoteHandler = {this.deleteNoteHandler}
+                    EditBoxHandler = {this.EditBoxHandler}
+                />
+                <EditNote
+                    showEditBox = {this.state.showEditBox}
+                    handleEditClose = {this.handleEditClose}
                 />
             </div>
         )
     }   
-}
+} 
