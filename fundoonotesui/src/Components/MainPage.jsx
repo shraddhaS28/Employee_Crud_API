@@ -87,7 +87,6 @@ export default class MainPage extends Component{
        await this.setState({
             notes: [...resultantNotes]
         })
-
     }
 
     EditBoxHandler=()=>{
