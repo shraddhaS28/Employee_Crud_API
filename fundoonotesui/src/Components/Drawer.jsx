@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {Drawer, AppBar, Toolbar,List, CssBaseline, Typography, Divider, IconButton, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
-import {Menu,ChevronLeft, ChevronRight, EmojiObjects,AddAlert,Edit, Archive, Delete, ColorLens, Search} from '@material-ui/icons';
+import {Menu,ChevronLeft, ChevronRight, EmojiObjects,AddAlert,Edit, Archive, Delete, Search} from '@material-ui/icons';
 import Button from '@material-ui/core/Button';
 
 const drawerWidth = 240;
@@ -102,7 +102,9 @@ export default function MiniDrawer(props) {
               onClick={handleDrawerOpen}
               edge="start"
               transition= 'width 2s'
-              className={clsx(classes.menuButton)}
+              className={clsx(classes.menuButton, {
+                [classes.hide]: open,
+              })}
             >
             <Menu />
             </IconButton>
@@ -110,7 +112,7 @@ export default function MiniDrawer(props) {
               </div>
             <div className='search-div'>
               
-              <input id='search' placeholder='Search...' />
+              <input id='search' onChange={props.searchChangeHandler} placeholder='Search...' />
               <Button
                 color="default"
                 startIcon={<Search />}
