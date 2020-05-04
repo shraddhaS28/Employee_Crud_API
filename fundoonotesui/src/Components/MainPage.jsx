@@ -9,6 +9,7 @@ export default class MainPage extends Component{
     state = {
         showField: false,
         showEditBox: false,
+        searchField: '',
         title: '',
         note: '',
         notes: [],
@@ -78,11 +79,18 @@ export default class MainPage extends Component{
         })
     }
 
+    searchChangeHandler = async (event) =>{
+        let searchFields = event.target.value;
+        await this.setState({
+            searchField: searchFields
+        })
+    }
+
     searchHandler= async(event)=>{
-        const searchedTitle = event.target.value;
+        // const searchedTitle = event.target.value;
         let notes = this.state.notes;
         let resultantNotes = notes.filter((ele)=>{
-            return ele.title === searchedTitle
+            return ele.title === this.state.searchField
         })
        await this.setState({
             notes: [...resultantNotes]
@@ -106,7 +114,10 @@ export default class MainPage extends Component{
     render() {
         return(
             <div id='main-div'>
-                <Drawer drawerChange={this.drawerChangeHandler} />
+                <Drawer drawerChange={this.drawerChangeHandler}
+                    searchHandler = {this.searchHandler}
+                    searchChangeHandler = {this.searchChangeHandler}
+                />
                 <Note 
                 noteChangeHandler={this.noteChangeHandler}
                 handleClose = {this.handleClose}
@@ -114,10 +125,8 @@ export default class MainPage extends Component{
                 showField = {this.state.showField} 
                 titleChangeHandler = {this.titleChangeHandler}
                 saveChangeHandler ={this.saveChangeHandler}
-                searchHandler = {this.searchHandler}
                 
                 />
-            
                 <NoteCard notes={this.state.notes} 
                     deleteNoteHandler = {this.deleteNoteHandler}
                     EditBoxHandler = {this.EditBoxHandler}
